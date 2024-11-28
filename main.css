@@ -1,0 +1,132 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Use Google font for modern, playful touch */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #8b0000, #000000); /* Red to black gradient */
+    background-size: 400% 400%;
+    animation: gradientMove 20s ease infinite; /* Slow moving background */
+}
+
+/* Keyframes for Floating Background */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container for Centering Content */
+.container {
+    background-color: rgba(255, 255, 255, 0.1); /* Light translucent white */
+    padding: 50px 70px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem; /* Smaller font size */
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600; /* Slightly lighter than bold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Lora', serif; /* Elegant serif font for a refined look */
+    animation: bounceInOut 4s ease-in-out infinite; /* Bounce effect for title */
+}
+
+/* Glowing and Elegant Square Button Styling */
+.click-btn {
+    font-family: 'Poppins', sans-serif; /* Poppins font for a modern and playful feel */
+    font-size: 1.2rem; /* Smaller font size for button */
+    padding: 15px 25px; /* Adjust padding for a smaller, square-ish button */
+    background-color: #ff4040ae; /* Bright pink color */
+    border: 2px solid #ff4081; /* Border color matches the background */
+    border-radius: 8px; /* Slightly rounded corners for a square-ish shape */
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 64, 129, 0.6); /* Subtle glow effect */
+    text-transform: uppercase; /* Uppercase letters for style */
+}
+
+.click-btn:hover {
+    background-color: #ff64a2; /* Lighter pink for hover effect */
+    border-color: #ff64a1;
+    transform: scale(1.1); /* Slight scale on hover */
+    box-shadow: 0 0 20px rgba(255, 64, 129, 0.9); /* Glowing effect */
+}
+
+.click-btn:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Animation for Bouncing Title Text */
+@keyframes bounceInOut {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Moves up and down */
+    }
+}
+
+/* Bubble Styles for Bubbles Moving in the Background */
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle white bubble */
+    border-radius: 50%;
+    animation: floatBubbles 30s linear infinite; /* Slower movement */
+    opacity: 0.6; /* Subtle opacity for bubbles */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Soft, subtle glow */
+}
+
+/* Smooth Bubble Movement */
+@keyframes floatBubbles {
+    0% {
+        transform: translateX(-50vw) translateY(-50vh);
+    }
+    25% {
+        transform: translateX(60vw) translateY(10vh);
+    }
+    50% {
+        transform: translateX(-70vw) translateY(50vh);
+    }
+    75% {
+        transform: translateX(30vw) translateY(70vh);
+    }
+    100% {
+        transform: translateX(-50vw) translateY(-50vh);
+    }
+}
+
+/* Random Bubble Sizes and Positions */
+.bubble-1 { width: 50px; height: 50px; top: 10%; left: 5%; animation-delay: 0s; }
+.bubble-2 { width: 60px; height: 60px; top: 20%; left: 40%; animation-delay: 1s; }
+.bubble-3 { width: 40px; height: 40px; top: 30%; left: 70%; animation-delay: 2s; }
+.bubble-4 { width: 55px; height: 55px; top: 50%; left: 15%; animation-delay: 3s; }
+.bubble-5 { width: 45px; height: 45px; top: 60%; left: 60%; animation-delay: 4s; }
+.bubble-6 { width: 65px; height: 65px; top: 70%; left: 85%; animation-delay: 5s; }
+.bubble-7 { width: 50px; height: 50px; top: 40%; left: 25%; animation-delay: 6s; }
+.bubble-8 { width: 55px; height: 55px; top: 20%; left: 80%; animation-delay: 7s; }
+.bubble-9 { width: 60px; height: 60px; top: 10%; left: 60%; animation-delay: 8s; }
+.bubble-10 { width: 45px; height: 45px; top: 80%; left: 50%; animation-delay: 9s; }
